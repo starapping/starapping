@@ -445,29 +445,18 @@
 <script src="js/functions.js" async></script>
 <script src="assets/validate.js" async></script>
 
-<!-- <script src="js/classie.js"></script>
-<script src="js/stepsForm.js"></script>
-<script>
-    var theForm = document.getElementById( 'theForm' );
-
-    new stepsForm( theForm, {
-        onSubmit : function( form ) {
-            // hide form
-            classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-
-            /*
-            form.submit()
-            or
-            AJAX request (maybe show loading indicator while we don't have an answer..)
-            */
-
-            // let's just simulate something...
-            var messageEl = theForm.querySelector( '.final-message' );
-            messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
-            classie.addClass( messageEl, 'show' );
-        }
-    } );
-</script> -->
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "js/jquery-2.2.4.min.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
 
 </body>
 
